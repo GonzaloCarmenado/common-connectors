@@ -3,3 +3,4 @@
  */
 
 export * from './lib/common-connector-clients.service';
+export * from './lib/models/client.model';

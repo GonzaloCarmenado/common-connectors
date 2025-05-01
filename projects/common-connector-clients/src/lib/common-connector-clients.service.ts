@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { GeneralHttpCoreHubService, StandarResponse } from '@gonzalocarmenado/general-http-core-hub';
-import { ClientModel } from './models/client-list.model';
+import { ClientModel } from './models/client.model';
 
 @Injectable({
   providedIn: 'root'

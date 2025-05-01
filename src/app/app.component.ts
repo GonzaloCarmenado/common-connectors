@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonConnectorClientsService } from '../../projects/common-connector-clients/src/public-api';
 import { environment } from '../environments/environment';
-import { ClientModel } from '../../projects/common-connector-clients/src/lib/models/client-list.model';
+import { ClientModel } from '../../projects/common-connector-clients/src/lib/models/client.model';
 import { StandarResponse } from '@gonzalocarmenado/general-http-core-hub';
 
 @Component({
