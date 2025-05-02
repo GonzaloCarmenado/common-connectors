@@ -29,7 +29,7 @@ export class AppComponent {
 
   public postDataFromConnector(): void {
     const newClient: ClientModel = this.generateClientPost();
-    this.clientService.postNewClient(environment.testAPI, newClient).then((response: StandarResponse<ClientModel[]>) => {
+    this.clientService.postNewClient(environment.testAPI, newClient).then((response: StandarResponse<ClientModel>) => {
       console.log('Response from connector:', response);
     }).catch((error) => {
       console.error('Error from connector:', error);

@@ -23,9 +23,9 @@ export class CommonConnectorClientsService {
       )
   }
 
-  public postNewClient(env: string, newClient:ClientModel): Promise<StandarResponse<ClientModel[]>> {
-    return  this.commonRest.commonPost<ClientModel[]>(`${env}/clients`,newClient)
-      .then((response: StandarResponse<ClientModel[]>) => {
+  public postNewClient(env: string, newClient:ClientModel): Promise<StandarResponse<ClientModel>> {
+    return  this.commonRest.commonPost<ClientModel>(`${env}/clients`,newClient)
+      .then((response: StandarResponse<ClientModel>) => {
         return response;
       },
         (error) => {
