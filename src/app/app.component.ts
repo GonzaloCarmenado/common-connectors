@@ -36,6 +36,16 @@ export class AppComponent {
     });
   }
 
+  public putDataFromConnector(): void {
+    const newClient: ClientModel = this.generateClientPost();
+    this.clientService.putClient(environment.testAPI,2, newClient).then((response: StandarResponse<ClientModel>) => {
+      console.log('Response from connector:', response);
+    }).catch((error) => {
+      console.error('Error from connector:', error);
+    });
+  }
+
+
   public generateClientPost(): ClientModel {
     return {
       id: "1",
