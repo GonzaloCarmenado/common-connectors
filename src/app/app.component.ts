@@ -45,6 +45,15 @@ export class AppComponent {
     });
   }
 
+  public deleteFromConnector(): void {
+    this.clientService.deleteClientById(environment.testAPI,3).then((response: StandarResponse<ClientModel>) => {
+      console.log('Response from connector:', response);
+    }).catch((error) => {
+      console.error('Error from connector:', error);
+    });
+  }
+  
+
 
   public generateClientPost(): ClientModel {
     return {

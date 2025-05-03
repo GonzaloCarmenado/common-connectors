@@ -58,4 +58,16 @@ export class CommonConnectorClientsService {
         }
       )
   }
+
+  public deleteClientById(env: string,id:number): Promise<StandarResponse<ClientModel>> {
+    return  this.commonRest.commonDelete<ClientModel>(`${env}/clients/${id}`)
+      .then((response: StandarResponse<ClientModel>) => {
+        return response;
+      },
+        (error) => {
+          console.error('Error fetching client list:', error);
+          throw error;
+        }
+      )
+  }
 }
